@@ -261,10 +261,10 @@
       const recognition = new SpeechRecognition();
       recognition.lang = "en-US";
       recognition.start();
-      resultBox.innerHTML = " Listening...";
+      resultBox.innerHTML = "I'm Here to Listen You....";
       recognition.onresult = function (event) {
         const transcript = event.results[0][0].transcript;
-        resultBox.innerHTML = "You said: " + transcript;
+        resultBox.innerHTML = "What You said: " + transcript;
         calculateFromVoice(transcript, true);
       };
       recognition.onerror = function (event) {
